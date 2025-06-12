@@ -17,7 +17,7 @@ export default function HistoryPageUser() {
   const [search, setSearch] = useState("");
   const [resultFilter, setResultFilter] = useState("");
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const pageSize = 10; // Number of items per page
   const { toast } = useToast();
 
   const fetchHistory = async () => {

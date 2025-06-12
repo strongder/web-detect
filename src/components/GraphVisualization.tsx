@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, Eye, Maximize } from "lucide-react"
+import {  Eye, Maximize } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -11,12 +11,6 @@ export default function GraphVisualization({ imageUrl }: any) {
   const [isFullscreen, setIsFullscreen] = useState(false)
 
   const handleDownload = () => {
-    // const link = document.createElement("a")
-    // link.href = imageUrl
-    // link.download = "apk-graph.png"
-    // document.body.appendChild(link)
-    // link.click()
-    // document.body.removeChild(link)
      window.open(imageUrl, "_blank")
   }
 

@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/components/ui/use-toast"
 import { Eye, EyeOff, Loader2 } from "lucide-react"
-import { Checkbox } from "@/components/ui/checkbox"
 import api from "@/api"
 
 export default function RegisterPage() {

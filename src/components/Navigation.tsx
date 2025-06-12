@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Download, History, Settings, Users } from "lucide-react";
+import { Download, History, Users } from "lucide-react";
 
 export default function Navigation() {
   const user = localStorage.getItem("user");

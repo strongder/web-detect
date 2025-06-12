@@ -3,7 +3,7 @@
 import type React from "react";
 
 import { useState, useRef } from "react";
-import { Upload, FileText, File, Loader2 } from "lucide-react";
+import {  FileText, File, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import GraphVisualization from "@/components/GraphVisualization";
