@@ -1,7 +1,7 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-export const URL = "http://103.109.37.70:8000";
+export const URL = "https://api.thanhtx.io.vn";
 // Kiểm tra accessToken có hết hạn không
 const checkExpiredToken = (token: string | null): boolean => {
   if (!token) return false;
