@@ -74,6 +74,7 @@ export default function ProfilePage() {
 
   // Gọi API đổi mật khẩu đúng chuẩn backend
   const changePassword = async () => {
+
     const data = {
       old_password: passwordData.currentPassword,
       new_password: passwordData.newPassword,
@@ -155,6 +156,15 @@ export default function ProfilePage() {
       toast({
         title: "Error",
         description: "New passwords do not match",
+        variant: "destructive",
+      });
+      return;
+    }
+    // > 6 characters
+    if (passwordData.newPassword.length < 6) {
+      toast({
+        title: "Error",
+        description: "New password must be at least 6 characters long",
         variant: "destructive",
       });
       return;

@@ -154,7 +154,7 @@ export default function UsersPage() {
     }
 
     try {
-      const res = await api.post("/users/", {
+      const res = await api.post("/users/create", {
         username: newUser.username,
         email: newUser.email,
         role: newUser.role,
