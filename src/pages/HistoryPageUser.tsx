@@ -92,9 +92,15 @@ export default function HistoryPageUser() {
 
   const formatTime = (timestamp: string) => {
     try {
+      console.log("Formatting time for:", timestamp);
       const date = new Date(timestamp);
-      return date.toLocaleTimeString();
+
+      // Cộng thêm 7 tiếng (UTC+7)
+      date.setHours(date.getHours() + 7);
+
+      return date.toLocaleTimeString("vi-VN"); // hoặc dùng "en-US" nếu muốn format theo kiểu 12h
     } catch (e) {
+      // Trường hợp lỗi, lấy phần giờ từ chuỗi (giữ nguyên fallback)
       return timestamp.split(" ")[1];
     }
   };
@@ -105,6 +111,8 @@ export default function HistoryPageUser() {
     (page - 1) * pageSize,
     page * pageSize
   );
+
+  console.log("Paginated Data:", paginatedData);
 
   return (
     <div className="container mx-auto text-white">
