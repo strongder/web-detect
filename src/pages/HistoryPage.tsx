@@ -7,6 +7,7 @@ import { useToast } from "@/components/ui/use-toast";
 import GraphVisualization from "@/components/GraphVisualization";
 import { URL } from "@/api";
 import api from "@/api";
+import { reverse } from "dns";
 
 export default function HistoryPage() {
   const [history, setHistory] = useState<any>([]);
@@ -189,7 +190,7 @@ export default function HistoryPage() {
               </tr>
             </thead>
             <tbody>
-              {paginatedData.map((item: any) => (
+              {paginatedData?.reverse().map((item: any) => (
                 <tr key={item.id} className="border-b border-[#1e293b]">
                   <td className="px-4 py-3 text-sm">
                     {formatDate(item.created_at)}
