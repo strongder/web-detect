@@ -7,7 +7,6 @@ import { useToast } from "@/components/ui/use-toast";
 import GraphVisualization from "@/components/GraphVisualization";
 import { URL } from "@/api";
 import api from "@/api";
-import { reverse } from "dns";
 
 export default function HistoryPage() {
   const [history, setHistory] = useState<any>([]);
